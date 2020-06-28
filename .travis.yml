@@ -49,4 +49,5 @@ before_install:
     - eval "${MATRIX_EVAL}"
 script:
     - eval "${MATRIX_EVAL}"
-    - make -j2
+    - cmake .
+    - make
