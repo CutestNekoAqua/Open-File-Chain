@@ -53,7 +53,8 @@ script:
     - cmake .
     - make
     - if [[ "${TRAVIS_TAG}" == "" ]]; then export TRAVIS_TAG=${TRAVIS_COMMIT} ; fi
-    - tar cvfz openfilechain-${TRAVIS_TAG}-${LABEL}.tar.gz bin/
+    - cp OpenFileChain bin/OpenFileChain-${TRAVIS_TAG}
+    - tar cvfz openfilechain-${TRAVIS_TAG}}.tar.gz bin/
 deploy:
   - provider: releases
     api_key:
