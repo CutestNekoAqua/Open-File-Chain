@@ -62,6 +62,6 @@ deploy:
       - openfilechain-${TRAVIS_TAG}-${LABEL}.tar.gz
     skip_cleanup: true
     on:
-      repo: turtlecoin/turtlecoin
+      repo: UnrealValentin/Open-File-Chain
       tags: true
       condition: "$_DEPLOYABLE = true"
