@@ -54,13 +54,13 @@ script:
     - make
     - if [[ "${TRAVIS_TAG}" == "" ]]; then export TRAVIS_TAG=${TRAVIS_COMMIT} ; fi
     - cp OpenFileChain bin/OpenFileChain-${TRAVIS_TAG}
-    - tar cvfz openfilechain-${TRAVIS_TAG}}.tar.gz bin/
+    - tar cvfz openfilechain-${TRAVIS_TAG}.tar.gz bin/
 deploy:
   - provider: releases
     api_key:
       secure: "fwVuwNx8jsU3j37EZ5h1W07tNdtiq78bgDt8R2rNliv9pipISd6bJhbUXg832cVwpUaNiVMMqoD1lIaMJ7hey8mryJtzkwidgzm1qAZ45vY50LB6afxoXRGTOEv1oqAm5lpGGjRiOwnAOgD5f7fPtLqmwGasHelce0kBMhaq0U5KM6GqbRp6r78WgqhuEibMdGJDROZUlU3KEA1MOH1QfAkfZEd2ey9fsAVdAtgg6TpP4u2X+NmNrnI2zm3mJMTl/pkTIN/H/jxUZ5qMJUdg6N9uJCh6J6lYigLZ9I0oQE4+QqQhE0q6HL228r+q5cXBsSYNpIn/g9LPX4bvFxyTDjaahQTpjYqpuRGrg1Z+o1EmY3u/fKuhjJGGHk5VivNctZXuAu4UwnMbrBhbjTPQUzljZgPvHBhL1b30AJ0W5Ah+QjSeUPYzMWcPwpePPKO7X4nPXjd6FKo/XPdMv5qihlUnWOMh9qsRK+XW/1U7F17bfF4R7jWMX9yJSI/6V3XG4EP98OLm7TLZbzdiUMV2dJwomIv6lsKCZ+M1niqidk44A2WhJUWlh6/JWy7Zp4beAOn2cpxNNwbwx9zFF9ruTkkkrMn6vbcMt5C505rrp2qJCv9XwQ+yf1hN3WwCiCGCb3SGBBrSej3xU7bGX21G2bHL3Vc4y6RvUSVlq8wcVuM="
     file:
-      - openfilechain-${TRAVIS_TAG}-${LABEL}.tar.gz
+      - openfilechain-${TRAVIS_TAG}.tar.gz
     skip_cleanup: true
     on:
       repo: UnrealValentin/Open-File-Chain
